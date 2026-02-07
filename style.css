@@ -1,1 +1,101 @@
-/* Add styles here */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden; /* Prevents scrollbars from appearing during animations */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23000" x="0" y="0" width="100%" height="100%"/><path fill="%23fff" d="M50 50 L0 0 L100 0 Z" opacity="0.02"/></svg>');
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.1),
+        0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.lotto-numbers {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 15px;
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #eee;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+/* Animation for number appearance */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#generate-btn {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    background: #5D50FE;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(93, 80, 254, 0.4);
+}
+
+#generate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(93, 80, 254, 0.6);
+}
+
+#generate-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 10px rgba(93, 80, 254, 0.6);
+}
