@@ -310,6 +310,102 @@ body.dark-mode .number {
     box-shadow: 0 2px 5px rgba(255,255,255,0.1);
 }
 
+/* Share Section */
+.share-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .share-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#share-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+body.dark-mode #share-text {
+    color: #aaa;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.share-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: white;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.share-btn:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.x-btn { background-color: #000; }
+.fb-btn { background-color: #1877F2; }
+.kakao-btn { background-color: #FEE500; color: #3C1E1E; font-weight: bold; }
+.copy-btn { background-color: #6c757d; }
+
+/* FAQ Section Styling */
+.faq-section {
+    margin-top: 50px;
+    text-align: left;
+    padding: 20px;
+    background: rgba(0,0,0,0.02);
+    border-radius: 15px;
+}
+
+body.dark-mode .faq-section {
+    background: rgba(255,255,255,0.03);
+}
+
+#faq-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+body.dark-mode #faq-title {
+    color: #f0f0f0;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #5D50FE;
+}
+
+.faq-item p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+body.dark-mode .faq-item p {
+    color: #ccc;
+}
+
 /* Contact Section */
 .contact-section {
     margin-top: 50px;

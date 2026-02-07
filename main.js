@@ -577,3 +577,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // Run init
     init();
 });
+
+// Social Share Functions
+function shareToX() {
+    const text = "Try your luck with the Global Lottery Number Generator! 🍀";
+    const url = window.location.href;
+    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+}
+
+function shareToFacebook() {
+    const url = window.location.href;
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+}
+
+function shareToKakao() {
+    const url = window.location.href;
+    // URL copy as a fallback since Kakao SDK requires an app key
+    navigator.clipboard.writeText(url).then(() => {
+        alert("Kakao sharing usually requires an App Key. URL has been copied to your clipboard instead!");
+    });
+}
+
+function copyURL() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(() => {
+        alert("URL copied to clipboard!");
+    });
+}
