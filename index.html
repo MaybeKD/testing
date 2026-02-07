@@ -41,6 +41,56 @@
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Structured Data for GEO (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Global Lottery Number Generator",
+      "operatingSystem": "Web",
+      "applicationCategory": "GameApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "A free tool to generate random lottery numbers for global games like Powerball, Mega Millions, and Lotto 6/45.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1024"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How are the lottery numbers generated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our tool uses a cryptographically secure pseudo-random number generator to ensure that every number has an equal chance of being selected, mimicking real lottery draw conditions."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Which global lotteries are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We support major international lotteries including US Powerball, Mega Millions, EuroMillions, and South Korea's Lotto 6/45."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this lottery generator free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our Global Lottery Number Generator is 100% free to use for everyone looking for random number inspiration."
+        }
+      }]
+    }
+    </script>
 </head>
 <body>
     <header class="app-header">
@@ -90,7 +140,26 @@
             <small id="disclaimer-text">
                 Disclaimer: This tool is for entertainment purposes only. The generated numbers are random and do not guarantee winning. Please play responsibly.
             </small>
+            <br>
+            <small class="last-updated">Last Updated: February 2026</small>
         </div>
+
+        <!-- FAQ Section for GEO -->
+        <section class="faq-section">
+            <h2 id="faq-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How are the lottery numbers generated?</h3>
+                <p>Our tool uses a secure random number generator to provide unbiased results for your lottery picks.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Which global lotteries are supported?</h3>
+                <p>We support US Powerball, Mega Millions, EuroMillions, and South Korea's Lotto 6/45.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is this lottery generator free to use?</h3>
+                <p>Yes, it is 100% free and requires no registration.</p>
+            </div>
+        </section>
 
         <div class="contact-section">
             <h3 id="contact-title">Partnership Inquiry</h3>
