@@ -4,46 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>Global Lottery Number Generator</title>
+    <meta name="description" content="Free random number generator for global lotteries including US Powerball, Mega Millions, EuroMillions, and Korean Lotto.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Lotto Number Generator</h1>
-        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-        <div class="lotto-numbers">
-            <span class="number"></span>
-            <span class="number"></span>
-            <span class="number"></span>
-            <span class="number"></span>
-            <span class="number"></span>
-            <span class="number"></span>
+    <header class="app-header">
+        <div class="header-controls">
+            <select id="lang-selector" aria-label="Select Language">
+                <option value="en">English</option>
+                <option value="ko">한국어</option>
+            </select>
+            <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
         </div>
+    </header>
+
+    <div class="container">
+        <h1 id="app-title">Global Lottery Generator</h1>
+        
+        <div class="game-selector-container">
+            <label for="game-selector" id="game-label">Select Game:</label>
+            <select id="game-selector">
+                <!-- Options populated by JS -->
+            </select>
+        </div>
+
+        <div class="game-info-box">
+            <h2 id="info-title">Game Rules</h2>
+            <p id="info-desc">Select a lottery game to see details and generate numbers.</p>
+        </div>
+
+        <div class="lotto-numbers" id="numbers-container">
+            <!-- Numbers will be injected here -->
+        </div>
+
         <button id="generate-btn">Generate Numbers</button>
 
+        <div class="disclaimer-box">
+            <small id="disclaimer-text">
+                Disclaimer: This tool is for entertainment purposes only. The generated numbers are random and do not guarantee winning. Please play responsibly.
+            </small>
+        </div>
+
         <div class="contact-section">
-            <h3>Partnership Inquiry</h3>
+            <h3 id="contact-title">Partnership Inquiry</h3>
             <form action="https://formspree.io/f/xkovnjaj" method="POST" id="contact-form">
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
+                <input type="email" name="email" id="email-placeholder" placeholder="Your Email" required>
+                <textarea name="message" id="message-placeholder" placeholder="Your Message" required></textarea>
+                <button type="submit" id="send-btn">Send Message</button>
             </form>
         </div>
 
         <div class="comments-section">
-            <h3>Comments</h3>
+            <h3 id="comments-title">Comments</h3>
             <div id="disqus_thread"></div>
             <script>
-                /**
-                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                /*
-                var disqus_config = function () {
-                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                */
-                (function() { // DON'T EDIT BELOW THIS LINE
+                (function() {
                 var d = document, s = d.createElement('script');
                 s.src = 'https://https-testing-3u1-pages-dev.disqus.com/embed.js';
                 s.setAttribute('data-timestamp', +new Date());

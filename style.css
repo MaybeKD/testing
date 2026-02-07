@@ -103,19 +103,132 @@ h1 {
 
 /* Theme Toggle Button */
 #theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
     background: none;
     border: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    z-index: 100;
     transition: transform 0.2s ease;
+    color: #333;
+}
+
+body.dark-mode #theme-toggle {
+    color: #f0f0f0;
 }
 
 #theme-toggle:hover {
     transform: scale(1.1);
+}
+
+/* Header */
+.app-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.header-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+}
+
+body.dark-mode .header-controls {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#lang-selector {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    color: #333;
+}
+
+body.dark-mode #lang-selector {
+    color: #f0f0f0;
+    border-color: #555;
+}
+
+/* Game Selector */
+.game-selector-container {
+    margin-bottom: 25px;
+}
+
+#game-selector {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+body.dark-mode #game-selector {
+    background: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+/* Game Info Box */
+.game-info-box {
+    background: rgba(0,0,0,0.03);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+body.dark-mode .game-info-box {
+    background: rgba(255,255,255,0.05);
+}
+
+.game-info-box h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #5D50FE;
+}
+
+.game-info-box p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+body.dark-mode .game-info-box p {
+    color: #ccc;
+}
+
+/* Disclaimer */
+.disclaimer-box {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+body.dark-mode .disclaimer-box {
+    color: #999;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Special Balls */
+.number.special {
+    border: 3px solid #FFD700; /* Gold border for special balls */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
 /* Dark Mode Styles */
