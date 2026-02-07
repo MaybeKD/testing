@@ -182,6 +182,60 @@ body.dark-mode #game-selector {
     border-color: #555;
 }
 
+/* Dashboard */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.dash-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+body.dark-mode .dash-card {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.05);
+}
+
+.dash-label {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+body.dark-mode .dash-label {
+    color: #aaa;
+}
+
+.dash-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+}
+
+body.dark-mode .dash-value {
+    color: #fff;
+}
+
+.dash-value.highlight {
+    color: #5D50FE;
+}
+
+body.dark-mode .dash-value.highlight {
+    color: #764ba2; /* Lighter purple for dark mode visibility */
+}
+
 /* Game Info Box */
 .game-info-box {
     background: rgba(0,0,0,0.03);
