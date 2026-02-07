@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://testing-3u1.pages.dev/sitemap.xml
